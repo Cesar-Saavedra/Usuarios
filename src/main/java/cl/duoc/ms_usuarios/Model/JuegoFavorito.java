@@ -13,16 +13,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/*
- * Tabla "juegos_favoritos" en la base de datos ms_usuarios.
- *
- * Un perfil puede tener MUCHOS juegos favoritos.
- * Un juego favorito pertenece a UN perfil.
- * Eso es una relacion de "muchos a uno" (ManyToOne).
- *
- * Ejemplos de nombres de juego:
- *   "Magic: The Gathering", "Pokemon TCG", "Yu-Gi-Oh", "Catan"
- */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
