@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cl.duoc.ms_usuarios.dto.ActualizarPerfilDto;
-import cl.duoc.ms_usuarios.dto.AgregarJuegoDto;
-import cl.duoc.ms_usuarios.dto.PerfilRespuestaDto;
-import cl.duoc.ms_usuarios.security.JwtUtil;
+import cl.duoc.ms_usuarios.Dto.ActualizarPerfilDto;
+import cl.duoc.ms_usuarios.Dto.AgregarJuegoDto;
+import cl.duoc.ms_usuarios.Dto.PerfilRespuestaDto;
+import cl.duoc.ms_usuarios.Security.JwtUtil;
 import cl.duoc.ms_usuarios.service.PerfilService;
 
 /*

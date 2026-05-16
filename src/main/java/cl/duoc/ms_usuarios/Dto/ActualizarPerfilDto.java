@@ -1,4 +1,4 @@
-package cl.duoc.ms_usuarios.dto;
+package cl.duoc.ms_usuarios.Dto;
 
 import lombok.Data;
 
