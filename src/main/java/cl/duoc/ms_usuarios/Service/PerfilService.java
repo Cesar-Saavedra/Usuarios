@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cl.duoc.ms_usuarios.dto.ActualizarPerfilDto;
-import cl.duoc.ms_usuarios.dto.AgregarJuegoDto;
-import cl.duoc.ms_usuarios.dto.PerfilRespuestaDto;
+import cl.duoc.ms_usuarios.Dto.ActualizarPerfilDto;
+import cl.duoc.ms_usuarios.Dto.AgregarJuegoDto;
+import cl.duoc.ms_usuarios.Dto.PerfilRespuestaDto;
 import cl.duoc.ms_usuarios.model.JuegoFavorito;
 import cl.duoc.ms_usuarios.model.Perfil;
 import cl.duoc.ms_usuarios.repository.JuegoFavoritoRepository;
