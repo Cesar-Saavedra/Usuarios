@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 import cl.duoc.ms_usuarios.Dto.ActualizarPerfilDto;
 import cl.duoc.ms_usuarios.Dto.AgregarJuegoDto;
 import cl.duoc.ms_usuarios.Dto.PerfilRespuestaDto;
-import cl.duoc.ms_usuarios.Security.JwtUtil;
 import cl.duoc.ms_usuarios.Service.PerfilService;
+import cl.duoc.ms_usuarios.security.JwtUtil;
 
 /*
  * Controlador REST de ms-usuarios.
