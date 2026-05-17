@@ -1,4 +1,4 @@
-package cl.duoc.ms_usuarios.repository;
+package cl.duoc.ms_usuarios.Repository;
 
 import java.util.List;
 
