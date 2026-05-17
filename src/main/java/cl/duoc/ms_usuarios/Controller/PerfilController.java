@@ -1,4 +1,4 @@
-package cl.duoc.ms_usuarios.Controller;
+package cl.duoc.ms_usuarios.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,12 +16,11 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cl.duoc.ms_usuarios.Dto.ActualizarPerfilDto;
-import cl.duoc.ms_usuarios.Dto.AgregarJuegoDto;
-import cl.duoc.ms_usuarios.Dto.PerfilRespuestaDto;
-import cl.duoc.ms_usuarios.Service.PerfilService;
-import cl.duoc.ms_usuarios.Security.JwtUtil;
-
+import cl.duoc.ms_usuarios.service.PerfilService;
+import cl.duoc.ms_usuarios.dto.ActualizarPerfilDto;
+import cl.duoc.ms_usuarios.dto.AgregarJuegoDto;
+import cl.duoc.ms_usuarios.security.JwtUtil;
+import cl.duoc.ms_usuarios.dto.PerfilRespuestaDto;
 /*
  * Controlador REST de ms-usuarios.
  * Puerto: 8082

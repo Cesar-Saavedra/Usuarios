@@ -1,11 +1,11 @@
-package cl.duoc.ms_usuarios.Repository;
+package cl.duoc.ms_usuarios.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import cl.duoc.ms_usuarios.Model.JuegoFavorito;
+import cl.duoc.ms_usuarios.model.JuegoFavorito;
 
 
 @Repository
