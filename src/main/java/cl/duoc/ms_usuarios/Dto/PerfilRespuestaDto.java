@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
  *   "nombre": "Pedro",
  *   "bio": "Jugador de Magic desde 2018",
  *   "ciudad": "Santiago",
- *   "juegosavoritos": ["Magic: The Gathering", "Pokemon TCG"]
+ *   "juegosFavoritos": ["Magic: The Gathering", "Pokemon TCG"]
  * }
  */
 @Data

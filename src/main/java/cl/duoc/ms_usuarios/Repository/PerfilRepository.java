@@ -1,11 +1,11 @@
-package cl.duoc.ms_usuarios.repository;
+package cl.duoc.ms_usuarios.Repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import cl.duoc.ms_usuarios.model.Perfil;
+import cl.duoc.ms_usuarios.Model.Perfil;
 
 @Repository
 public interface PerfilRepository extends JpaRepository<Perfil, Integer> {

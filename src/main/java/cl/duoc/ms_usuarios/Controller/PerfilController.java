@@ -1,4 +1,4 @@
-package cl.duoc.ms_usuarios.controller;
+package cl.duoc.ms_usuarios.Controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +20,7 @@ import cl.duoc.ms_usuarios.Dto.ActualizarPerfilDto;
 import cl.duoc.ms_usuarios.Dto.AgregarJuegoDto;
 import cl.duoc.ms_usuarios.Dto.PerfilRespuestaDto;
 import cl.duoc.ms_usuarios.Security.JwtUtil;
-import cl.duoc.ms_usuarios.service.PerfilService;
+import cl.duoc.ms_usuarios.Service.PerfilService;
 
 /*
  * Controlador REST de ms-usuarios.

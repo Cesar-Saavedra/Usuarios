@@ -1,4 +1,4 @@
-package cl.duoc.ms_usuarios.model;
+package cl.duoc.ms_usuarios.Model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
