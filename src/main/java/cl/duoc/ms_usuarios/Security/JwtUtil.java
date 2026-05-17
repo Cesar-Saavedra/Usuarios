@@ -1,4 +1,4 @@
-package cl.duoc.ms_usuarios.Security;
+package cl.duoc.ms_usuarios.security;
 
 import javax.crypto.SecretKey;
 
