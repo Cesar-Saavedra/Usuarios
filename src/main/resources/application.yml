@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: ms-usuarios
+  datasource:
+    # Base de datos MySQL (XAMPP)
+    # Crea la BD "ms_usuarios" en phpMyAdmin antes de correr el proyecto.
+    # Las tablas se crean automaticamente con ddl-auto=update
+    url: jdbc:mysql://localhost:3307/ms_usuarios
+    username: root
+    password: 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8082
+
+jwt:
+  # JWT - DEBE SER EL MISMO SECRET QUE EN ms-login
+  # Asi este microservicio puede leer los tokens generados por ms-login
+  secret: c2VjcmV0b011eUZ1ZXJ0ZVBhcmFDYXJkTGlua1Byb3llY3RvRHVvYzIwMjY=
+  expiration: 86400000
+
+# URL del microservicio de login (por si necesitas consultarlo en el futuro)
+ms:
+  login:
+    url: http://localhost:8081
+
+springdoc:
+  api-docs:
+    enabled: true
+    version: openapi-3-0
+  swagger-ui:
+    enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      
