@@ -1,5 +1,6 @@
 package cl.duoc.ms_usuarios.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -32,6 +33,7 @@ public class JuegoFavorito {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "Identificador único del juego favorito")
     private Integer id;
 
     // Relacion: este juego pertenece a un perfil
@@ -42,6 +44,7 @@ public class JuegoFavorito {
 
     // Nombre del juego (ej: "Magic: The Gathering")
     @Column(nullable = false)
+    @Schema(description = "Nombre del juego favorito")
     private String nombreJuego;
 
 }

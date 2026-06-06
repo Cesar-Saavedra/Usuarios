@@ -1,5 +1,6 @@
 package cl.duoc.ms_usuarios.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -30,22 +31,27 @@ public class Perfil {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "Identificador único del Usuario")
     private Integer id;
 
     // Id del usuario en ms-login. Cada usuario tiene UN perfil.
     @Column(nullable = false, unique = true)
+    @Schema(description = "Id del usuario en ms-login")
     private Integer usuarioId;
 
     // Nombre que muestra el perfil (puede ser diferente al nombre de registro)
     @Column(nullable = false)
+    @Schema(description = "Nombre del usuario")
     private String nombre;
 
     // Texto libre que el usuario escribe sobre si mismo
     @Column(length = 500)
+    @Schema(description = "Biografía del usuario")
     private String bio;
 
     // Ciudad donde vive el jugador (ej: "Santiago", "Valparaiso")
     @Column
+    @Schema(description = "Ciudad donde vive el jugador")
     private String ciudad;
 
 }

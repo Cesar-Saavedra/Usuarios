@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import cl.duoc.ms_usuarios.service.PerfilService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import cl.duoc.ms_usuarios.dto.ActualizarPerfilDto;
 import cl.duoc.ms_usuarios.dto.AgregarJuegoDto;
 import cl.duoc.ms_usuarios.security.JwtUtil;
@@ -40,6 +42,8 @@ import cl.duoc.ms_usuarios.dto.PerfilRespuestaDto;
  */
 @RestController
 @RequestMapping("/api/perfil")
+@Tag(name= "Perfil", description = "Gestión de perfiles de usuarios")
+
 public class PerfilController {
 
     @Autowired
@@ -66,6 +70,7 @@ public class PerfilController {
      * }
      */
     @GetMapping("/mio")
+    @Operation(summary = "Ver mi perfil")
     public ResponseEntity<?> verMiPerfil(
             @RequestHeader(value = "Authorization", required = false) String authHeader) {
 
@@ -104,6 +109,7 @@ public class PerfilController {
      * Puedes enviar solo los campos que quieres cambiar.
      */
     @PutMapping("/mio")
+    @Operation(summary = "Actualizar mi perfil")
     public ResponseEntity<?> actualizarMiPerfil(
             @RequestHeader(value = "Authorization", required = false) String authHeader,
             @RequestBody ActualizarPerfilDto dto) {
@@ -134,6 +140,7 @@ public class PerfilController {
      * Util para mostrar el perfil de otros jugadores.
      */
     @GetMapping("/{usuarioId}")
+    @Operation(summary = "Ver perfil público")
     public ResponseEntity<?> verPerfilPublico(
             @RequestHeader(value = "Authorization", required = false) String authHeader,
             @PathVariable Integer usuarioId) {
@@ -166,6 +173,7 @@ public class PerfilController {
      * Respuesta 201: el perfil actualizado con el nuevo juego en la lista.
      */
     @PostMapping("/mio/juegos")
+    @Operation(summary = "Agregar juego favorito")
     public ResponseEntity<?> agregarJuego(
             @RequestHeader(value = "Authorization", required = false) String authHeader,
             @RequestBody AgregarJuegoDto dto) {
@@ -202,6 +210,7 @@ public class PerfilController {
      * Respuesta 200: el perfil actualizado sin ese juego.
      */
     @DeleteMapping("/mio/juegos/{juegoId}")
+    @Operation(summary = "Eliminar juego favorito")
     public ResponseEntity<?> eliminarJuego(
             @RequestHeader(value = "Authorization", required = false) String authHeader,
             @PathVariable Integer juegoId) {
