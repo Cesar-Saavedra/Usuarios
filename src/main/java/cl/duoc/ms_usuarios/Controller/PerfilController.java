@@ -23,6 +23,7 @@ import cl.duoc.ms_usuarios.dto.ActualizarPerfilDto;
 import cl.duoc.ms_usuarios.dto.AgregarJuegoDto;
 import cl.duoc.ms_usuarios.security.JwtUtil;
 import cl.duoc.ms_usuarios.dto.PerfilRespuestaDto;
+import jakarta.validation.Valid;
 /*
  * Controlador REST de ms-usuarios.
  * Puerto: 8082
@@ -112,7 +113,7 @@ public class PerfilController {
     @Operation(summary = "Actualizar mi perfil")
     public ResponseEntity<?> actualizarMiPerfil(
             @RequestHeader(value = "Authorization", required = false) String authHeader,
-            @RequestBody ActualizarPerfilDto dto) {
+            @Valid @RequestBody ActualizarPerfilDto dto) {
 
         String token = validarHeader(authHeader);
         if (token == null) {
@@ -176,16 +177,11 @@ public class PerfilController {
     @Operation(summary = "Agregar juego favorito")
     public ResponseEntity<?> agregarJuego(
             @RequestHeader(value = "Authorization", required = false) String authHeader,
-            @RequestBody AgregarJuegoDto dto) {
+            @Valid @RequestBody AgregarJuegoDto dto) {
 
         String token = validarHeader(authHeader);
         if (token == null) {
             return respuestaNoAutorizado("Token requerido.");
-        }
-
-        // Validar que el nombre del juego no este vacio
-        if (dto.getNombreJuego() == null || dto.getNombreJuego().isBlank()) {
-            return respuestaError("El nombre del juego no puede estar vacío.");
         }
 
         Integer usuarioId = jwtUtil.extraerId(token);
